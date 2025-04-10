@@ -30,8 +30,19 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-
+// route since we don't have to scan directories.
+$routes->get('/', 'Landingpage::index');
+$routes->get('/login', 'Auth::index');
+$routes->post('/logout', 'Auth::logout');
+$routes->post('/check_auth', 'Auth::check_auth');
+$routes->get('/beranda', 'Home::index', ['filter' => 'auth:role_menu']);
+$routes->post('/dashboard/status-kegiatan', 'Home::getChartKegiatan');
+// Master Kelompok Kegiatan 
+$routes->get('/master/mobil', 'Mobil::index', ['filter' => 'auth:role_menu']);
+$routes->post('/mobil/read-data/(:num)', 'Mobil::read_data/$1');
+$routes->post('/mobil/load-modal', 'Mobil::load_modal');
+$routes->post('/mobil/save', 'Mobil::save');
+$routes->post('/mobil/delete', 'Mobil::delete');
 /**
  * --------------------------------------------------------------------
  * Additional Routing

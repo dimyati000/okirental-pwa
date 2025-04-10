@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class Landingpage extends BaseController
 {
 	public function index()
 	{
