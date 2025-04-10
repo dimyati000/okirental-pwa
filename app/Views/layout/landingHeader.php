@@ -4,6 +4,18 @@
     <title><?= $title ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Oki Rental Mobil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <meta name="theme-color" content="#ff0000"/>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        };
+    </script>
+
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
@@ -33,7 +45,7 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="">Evano<span>Trans</span></a>
+	      <a class="navbar-brand" href="">Oki <span>Rentcar</span> </a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>

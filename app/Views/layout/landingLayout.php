@@ -7,9 +7,9 @@
         <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
           <div class="col-lg-8 ftco-animate">
           	<div class="text w-100 text-center mb-md-5 pb-md-5">
-	            <h1 class="mb-4">Evano Trans Sidoarjo</h1>
-              <p>Penyedia Jasa Sewa Mobil Dengan Cepat Melalui Sistem Booking Online.
-              <br>Kami menyediakan sewa mobil lepas kunci serta Mobil yang telah anda sewa bisa kami kirim ke rumah sekarang juga!</p>
+				<h1 class="mb-4">Oki Rentcar Surabaya</h1>
+            	<p>Penyedia Jasa Sewa Mobil Dengan Cepat Melalui Sistem Booking Online.
+            	<br>Kami menyediakan sewa mobil lepas kunci serta Mobil yang telah anda sewa bisa kami kirim ke rumah sekarang juga!</p>
               <!-- <p class="card-text"><small class="text-muted">Salam Sewa Sejahtera :D</small></p> -->
 
 	            <!-- <p style="font-size: 18px;">Kami melayani sewa mobil harian/ mingguan/ bulanan. Tersedia berbagai pilihan armada. 

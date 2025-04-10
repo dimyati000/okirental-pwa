@@ -38,7 +38,7 @@
                 <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-evanotranshitam.png') ?>"  style="border-radius:5px" alt="logo" width="80%">
               </a>
             </div>
-            <p>EVANO TRANS SYSTEM</p>
+            <p>OKI RENTCAR SYSTEM</p>
           </div>
           <ul class="sidebar-menu">
             <li class="menu-header">MENU</li>
