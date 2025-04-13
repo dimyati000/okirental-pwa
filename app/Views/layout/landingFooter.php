@@ -15,20 +15,16 @@
         <div class="row">
             <div class="col-md" style="margin-top:-80px">
                 <div class="ftco-footer-widget mb-4">
-                    <!-- <h2 class="ftco-heading-2"><a href="#" class="logo">Evano<span>Trans</span></a></h2> -->
+                    <!-- <h2 class="ftco-heading-2"><a href="#" class="logo">Oki<span>Rentcar</span></a></h2> -->
                     <div class="mb-2">
                         <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-evanotrans.png') ?>"  style="border-radius:5px" alt="logo" width="100%" class="shadow-element">
                     </div>
-                    <p class="py-2">Bisa sewa mobil dengan cepat, mudah, nyaman & aman, Evano Trans Saja !!!</p>
-                    <p>Mau sewa mobil berkualitas tanpa perlu was-was, pilih Evano Trans !!!</p>
+                    <p class="py-2">Bisa sewa mobil dengan cepat, mudah, nyaman & aman, Oki Rentcar Saja !!!</p>
+                    <p>Mau sewa mobil berkualitas tanpa perlu was-was, pilih Oki Rentcar !!!</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                        <li class="ftco-animate"><a target="_blank" href="https://instagram.com/evano.trans"><span
-                                    class="icon-instagram"></span></a></li>
-                        <li class="ftco-animate"><a target="_blank"
-                                href="https://www.facebook.com/profile.php?id=100090627395123"><span
-                                    class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="<?php echo base_url('Login')?>" class="py-2 d-block"><span
-                                    class="icon-user"></span></a></li>
+                        <li class="ftco-animate"><a target="_blank" href="https://instagram.com/evano.trans"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a target="_blank" href="https://www.facebook.com/profile.php?id=100090627395123"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="<?= site_url('login') ?>" class="py-2 d-block"><span class="icon-user"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -61,15 +57,14 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Permata regency cluster
-                                    topaz blok b1 23, Kludan, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61272</span>
+                            <li><span class="icon icon-map-marker"></span><span class="text">Jl. Semolowaru Elok, Semolowaru, Kec. Sukolilo, Surabaya, Jawa Timur</span>
                             </li>
                             <li><a target="_blank"
                                     href="https://api.whatsapp.com/send?phone=6282257435228&text=Halo%20admin%20Evano%20Trans.%20Saya%20baru%20saja%20mengunjungi%20Webite%20Evanotrans.com,%20dan%20ingin%20sewa%20mobil ....."><span
                                         class="icon icon-phone"></span><span class="text">+62822-5743-5228</span></a>
                             </li>
                             <li><a target="_blank" href=""><span class="icon icon-envelope"></span><span
-                                        class="text">info@evanotrans.com</span></a></li>
+                                        class="text">info@okirentcar.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,7 +74,7 @@
             <div class="col-md-12 text-center">
                 <p>
                     Copyright &copy;<script>
-                    </script>2023 All rights reserved | Evano Trans made with ❤️
+                    </script>2025 All rights reserved | OKi Rentcar made with ❤️
                 </p>
             </div>
         </div>

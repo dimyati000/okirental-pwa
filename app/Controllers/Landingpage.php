@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-class Landingpage extends BaseController
+class LandingPage extends BaseController
 {
 	public function index()
 	{
