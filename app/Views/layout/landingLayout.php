@@ -1,7 +1,6 @@
 <?= $this->include('layout/landingHeader') ?>
 
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('/evolo/images/bg-evano-10.jpg');" data-stellar-background-ratio="0.5">
-      <!-- <div class="hero-wrap ftco-degree-bg" style="background-image: url('assets/img/bg_1.jpg');" data-stellar-background-ratio="0.5"> -->
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
@@ -10,18 +9,6 @@
 				<h1 class="mb-4">Oki Rentcar Surabaya</h1>
             	<p>Penyedia Jasa Sewa Mobil Dengan Cepat Melalui Sistem Booking Online.
             	<br>Kami menyediakan sewa mobil lepas kunci serta Mobil yang telah anda sewa bisa kami kirim ke rumah sekarang juga!</p>
-              <!-- <p class="card-text"><small class="text-muted">Salam Sewa Sejahtera :D</small></p> -->
-
-	            <!-- <p style="font-size: 18px;">Kami melayani sewa mobil harian/ mingguan/ bulanan. Tersedia berbagai pilihan armada. 
-				Unit : Pajero, Fortuner, Stargazer, Inova Venturer, New Avanza, BRV, Ertiga Hybrid, Scross, Juke, Sigra, Ayla, 
-				Pick Up New Carry AC/PS, Pick Up Granmax AC/PS</P> -->
-	            <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
-	            	<!-- <div class="icon d-flex align-items-center justify-content-center">
-	            		<span class="ion-ios-play"></span>
-	            	</div> -->
-	            	<!-- <div class="heading-title ml-5">
-		            	<span>Reservasi Sekarang</span>
-	            	</div> -->
 	            </a>
             </div>
           </div>
@@ -44,7 +31,7 @@
 	          	<span class="subheading">Tentang Kami</span>
 	            <h2 class="mb-4">Rental Mobil Lepas Kunci</h2>
 
-	            <p>Evano Trans adalah jenis usaha yang bergerak di bidang jasa transportasi serta biro jasa perjalanan wisata yang menyediakan berbagai fasilitas yang berhubungan dengan perjalanan dan mobilitas.</p>
+	            <p>Oki Rentcar adalah jenis usaha yang bergerak di bidang jasa transportasi serta biro jasa perjalanan wisata yang menyediakan berbagai fasilitas yang berhubungan dengan perjalanan dan mobilitas.</p>
 	            <p>Semakin pesatnya perkembangan dunia usaha baik di bidang jasa maupun perdagangan, menjadi latar belakang semangat kami sebagai pelaku usaha di bidang jasa transportasi untuk selalu meningkatkan pelayanan dari waktu ke waktu.</p>
 	            <p><a href="#" class="btn btn-primary btn-lg">Selengkapnya</a></p>
 	          </div>
@@ -57,7 +44,7 @@
 			<div class="container">
 				<div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Kenapa Harus Evano Trans?</span>
+          	<span class="subheading">Kenapa Harus Oki Rentcar?</span>
             <h2 class="mb-3">Kepuasan Pelanggan adalah Prioritas Kami</h2>
           </div>
         </div>
@@ -77,7 +64,7 @@
             	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
             	<div class="text w-100">
                 <h3 class="heading mb-2">Network Area</h3>
-                <p>Jaringan Evano Trans yang luas di beberapa kota sehingga dapat memenuhi kebutuhan pelanggan.</p>
+                <p>Jaringan Oki Rentcar yang luas di beberapa kota sehingga dapat memenuhi kebutuhan pelanggan.</p>
               </div>
             </div>
 					</div>
@@ -95,7 +82,7 @@
             	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
             	<div class="text w-100">
                 <h3 class="heading mb-2">Our Customer</h3>
-                <p>Seluruh pelanggan Evano Trans meliputi instansi Pemerintahan, Perkantoran, Perusahaan, hingga individu.</p>
+                <p>Seluruh pelanggan Oki Rentcar meliputi instansi Pemerintahan, Perkantoran, Perusahaan, hingga individu.</p>
               </div>
             </div>
 					</div>

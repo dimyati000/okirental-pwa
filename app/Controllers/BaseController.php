@@ -15,6 +15,7 @@ namespace App\Controllers;
  */
 
 use CodeIgniter\Controller;
+use Config\Database;
 
 class BaseController extends Controller
 {
@@ -41,6 +42,14 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		// Load connection database in controller
+		$this->db = Database::connect();
+		// Load Costum Library UUID
+		// $this->uuid = new Uuid();
+		// Load Costum Library Breadcrumb
+		// $this->breadcrumb = new Breadcrumb();
+		// Load Model App Config
+		$this->config = new \App\Models\ConfigModel();
 	}
 
 }

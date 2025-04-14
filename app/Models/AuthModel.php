@@ -1,23 +1,24 @@
-<?php
-class AuthModel extends CI_Model
+<?php namespace App\Models;
+use CodeIgniter\Model;
+
+class AuthModel extends Model
 {
-	public function cekLogin()
-	{
-		$idUser = set_value('idUser');
-		$namaUser = set_value('namaUser');
-		$username = set_value('username');
-		$password = set_value('password');
-		$result = $this->db->where('username', $username)
-			->where('password', $password)
-			->limit(1)
-			->get('tb_user');
-		if ($result->num_rows() > 0) {
-			return $result->row();
-		} else {
-			return array();
-		}
-	}
-
-
-	
+    protected $table = "users";
+    public function check_auth($username, $pass=""){
+        $query  = $this->db->query("
+                select * from users
+                where (email = '$username' or username = '$username')  and password = MD5('$pass')
+                limit 1
+        ");
+        return $query;
+    }
+    public function check_login($user_id){
+        $query  = $this->db->query("
+                select u.id_user, u.nama as namaUser, u.email as email, u.id_role, r.nama as nama_role, u.status, u.foto from users u
+                join roles r on r.id_role = u.id_role
+                where u.id_user = '$user_id'
+        ");
+        return $query;
+    }
 }
+?>

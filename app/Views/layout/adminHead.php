@@ -7,6 +7,9 @@
 	<title>Admin</title>
 	<meta name="description" content="The small framework with powerful features">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistem Informasi Oki Rentcar">
+  <meta name="keywords" content="Sistem Informasi Oki Rentcar">
+  <meta name="author" content="Dimyati Azhar">
 	<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
   <meta name="theme-color" content="#ff0000"/>
   <link rel="manifest" href="manifest.json">

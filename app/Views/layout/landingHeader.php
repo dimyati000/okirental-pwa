@@ -4,7 +4,9 @@
     <title><?= $title ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Oki Rental Mobil">
+    <meta name="description" content="Sistem Informasi Oki Rentcar">
+    <meta name="keywords" content="Sistem Informasi Oki Rentcar">
+    <meta name="author" content="Dimyati Azhar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
     <meta name="theme-color" content="#ff0000"/>
