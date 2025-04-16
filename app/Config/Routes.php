@@ -16,7 +16,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Beranda');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -35,7 +35,7 @@ $routes->get('/', 'LandingPage::index');
 $routes->get('/login', 'Auth::index');
 $routes->post('/logout', 'Auth::logout');
 $routes->post('/check_auth', 'Auth::check_auth');
-$routes->get('/beranda', 'Home::index', ['filter' => 'auth:role_menu']);
+$routes->get('/beranda', 'Beranda::index');
 $routes->post('/dashboard/status-kegiatan', 'Home::getChartKegiatan');
 // Master Kelompok Kegiatan 
 $routes->get('/master/mobil', 'Mobil::index', ['filter' => 'auth:role_menu']);

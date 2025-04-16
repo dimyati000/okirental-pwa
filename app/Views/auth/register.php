@@ -1,5 +1,3 @@
-<title><?= $title ?></title>
-
 <body>
     <div id="app">
         <section class="section">
@@ -79,7 +77,3 @@
             </div>
         </section>
     </div>
-
-</body>
-
-</html>

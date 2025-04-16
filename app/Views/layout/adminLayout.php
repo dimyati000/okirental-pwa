@@ -17,17 +17,13 @@
                   <div class="d-sm-none d-lg-inline-block">Hi, azhar </div>         </a>
                 <div class="dropdown-menu dropdown-menu-right">
                 <!-- <div class="dropdown-title">Logged in 5 min ago</div>
-            <a href="<?= site_url('Profile') ?>" class="dropdown-item has-icon">
+                    <a href="<?= site_url('Profile') ?>" class="dropdown-item has-icon">
                         <i class="far fa-user"></i> Profile
                     </a>
                   <div class="dropdown-divider"></div>  -->
-                
                 </div>
               </li>
             </ul>
-
-          
-
         </ul>
       </nav>
       <div class="main-sidebar">
@@ -64,12 +60,10 @@
       </div>
       <?= $this->renderSection('content') ?>
     </div>
-  </div>
-  
-  <?= $this->include('layout/adminFooter') ?>
-  
+  </div>  
 </body>
-
+<?= $this->include('layout/adminFooter') ?>
+  
 <?= $this->include('layout/adminJs')?>
   
 </html><!-- Begin Page Content -->
