@@ -41,8 +41,13 @@ position: relative;
                                 <p><small>[ EVANO TRANS SYSTEM ]</small></p>
                             </div>
                             <div class="card-body">
-                                <?php echo $this->session->flashdata('pesan') ?>
-                                <form method="POST" action="<?php echo base_url('Login') ?>" class="needs-validation" novalidate="">
+                                <?php if (!empty(session()->getFlashdata('error'))) { ?>
+                                    <div class="alert alert-danger">
+                                        <?php echo session()->getFlashdata('error') ?>
+                                    </div>
+                                <?php } ?>
+
+                                <form method="POST" action="<?= site_url('check_auth') ?>" class="needs-validation" novalidate="">
                                     <div class="form-group">
                                         <label for="username">Username</label>
                                         <input id="username" type="text" class="form-control" name="username" tabindex="1" required autofocus>
@@ -73,9 +78,6 @@ position: relative;
                                     </div>
                                 </form>
                             </div>
-                        </div>
-                        <div style="text-align: center;">
-                            Copyright &copy;2023 All rights reserved | Evano Trans.
                         </div>
                     </div>
                 </div>

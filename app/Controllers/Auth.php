@@ -21,40 +21,42 @@ class Auth extends BaseController
 
 	public function check_auth()
 	{
-		$this->form_validation->set_rules('username', 'Username', 'required', [
-            'required' => 'Username Wajib Di isi'
-        ]);
-        $this->form_validation->set_rules('password', 'Password', 'required', [
-            'required' => 'Password Wajib Di isi'
-        ]);
-        if($this->form_validation->run() == FALSE){
-            $this->load->view('auth/login', $data);
-        }else{
-            $auth = $this->ModelAuth->cekLogin();
-            if($auth == FALSE)
-            {
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Username atau Password anda salah</strong>. Silahkan coba lagi !
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>');
-                redirect('../Login');
-            }else{
-                $this->session->set_userdata('idUser', $auth->idUser);
-                $this->session->set_userdata('namaUser', $auth->namaUser);
-                $this->session->set_userdata('username', $auth->username);                   
-                $this->session->set_userdata('roleId', $auth->roleId);
-                switch($auth->roleId){
-                    case 1 : redirect('../Dashboard');
-                    break;
-                    case 2 : redirect('../Dashboard');
-                    break;
-                    default: break; 
-                }
-            }
+        $validation =  \Config\Services::validation();
+		$username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+
+        $rules = [
+			'username' => 'required',
+			'password' => 'required'
+		];
+		if ($this->validate($rules) == FALSE) {
+            session()->setFlashdata('error', 'Username / Password tidak boleh kosong');
+            return redirect()->to(base_url('login'));
         }
-		return $this->respond($response, 200);
+
+        $cek_login = $this->Auth_m->check_auth($username, $password)->getResult();
+        if (count($cek_login) > 0) {
+            $data_user = $cek_login[0];
+            $ses_data = array(
+                'auth_id_user' => $data_user->id,
+                'auth_nama_user' => $data_user->nama,
+                'auth_email' => $data_user->email,
+                'auth_username' => $data_user->username,
+                'auth_is_login' => TRUE,
+                'auth_id_role' => $data_user->id_role,
+                'auth_nama_role' => $data_user->nama_role,
+            );
+            session()->set($ses_data);
+            return redirect()->to(base_url('beranda'));
+        } else {
+            session()->setFlashdata('error', 'Username / Password salah');
+            return redirect()->to(base_url('login'));
+        }
 	}
 
+    public function logout() 
+    {
+        session()->destroy();
+        return redirect()->to(base_url('login'));
+    }
 }
