@@ -1,15 +1,3 @@
-<style>
-    /* Style Dasar untuk Elemen */
-    .shadow-element {
-      transition: box-shadow 0.5s ease; /* Efek transisi saat perubahan terjadi */
-    }
-
-    /* Efek Bayangan saat Hover */
-    .shadow-element:hover {
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    }
-  </style>
-
 <footer class="ftco-footer ftco-bg-grey ftco-section">
     <div class="container">
         <div class="row">
@@ -17,7 +5,7 @@
                 <div class="ftco-footer-widget mb-4">
                     <!-- <h2 class="ftco-heading-2"><a href="#" class="logo">Oki<span>Rentcar</span></a></h2> -->
                     <div class="mb-2">
-                        <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-evanotrans.png') ?>"  style="border-radius:5px" alt="logo" width="100%" class="shadow-element">
+                        <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-okirentcar-putih.png') ?>" alt="logo" width="60%" class="shadow-element">
                     </div>
                     <p class="py-2">Bisa sewa mobil dengan cepat, mudah, nyaman & aman, Oki Rentcar Saja !!!</p>
                     <p>Mau sewa mobil berkualitas tanpa perlu was-was, pilih Oki Rentcar !!!</p>
@@ -74,7 +62,7 @@
             <div class="col-md-12 text-center">
                 <p>
                     Copyright &copy;<script>
-                    </script>2025 All rights reserved | OKi Rentcar made with ❤️
+                    </script>2025 All rights reserved | Oii Rentcar made with ❤️
                 </p>
             </div>
         </div>

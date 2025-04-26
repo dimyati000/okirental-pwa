@@ -10,7 +10,7 @@
   <meta name="description" content="Sistem Informasi Oki Rentcar">
   <meta name="keywords" content="Sistem Informasi Oki Rentcar">
   <meta name="author" content="Dimyati Azhar">
-	<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('/assets/img/logo-favicon.png') ?>">
   <meta name="theme-color" content="#ff0000"/>
   <link rel="manifest" href="manifest.json">
   <script>
@@ -60,9 +60,6 @@
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  
-  <!-- Favicon  -->
-  <link rel="icon" href="<?php echo base_url('/assets/img/logo-favicon.png') ?>">
   
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/style.css">

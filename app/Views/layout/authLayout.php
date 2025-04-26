@@ -1,4 +1,4 @@
-<?= $this->include('layout/adminHead') ?>
+<?= $this->include('layout/adminCSS') ?>
   
 <div id="app">
     <div class="main-wrapper main-wrapper-1">

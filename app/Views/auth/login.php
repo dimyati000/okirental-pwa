@@ -25,20 +25,22 @@ position: relative;
 }
 </style>
 
+
+
 <body>
     <div id="app">
         <section class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-                        <div>
-                            <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-evanotranshitam.png') ?>"  style="border-radius:5px" alt="logo" width="100%">
+                        <div class="login-brand">
+                            <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-okirentcar.png') ?>"  style="border-radius:5px" alt="logo" width="50%">
                         </div>
                         <br>
-                        <div class="card card-red">
+                        <div class="card card-primary">
                             <div class="card-header">
-                                <h3>Login ETS</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <p><small>[ EVANO TRANS SYSTEM ]</small></p>
+                                <h3>Login ORS</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <p><small>[ OKI RENTCAR SYSTEM ]</small></p>
                             </div>
                             <div class="card-body">
                                 <?php if (!empty(session()->getFlashdata('error'))) { ?>
@@ -71,7 +73,7 @@ position: relative;
                                             Login
                                         </button>
                                         <div style="margin-bottom:-25px" class="mt-3 text-muted text-center">
-                                            Kembali ke Halaman <a href="<?php echo base_url('Home') ?>">Home</a>
+                                            Kembali ke Halaman <a href="<?php echo base_url('#') ?>">Home</a>
                                             <!-- |
                                             Belum Punya Akun ? <a href="<?php echo base_url('Register') ?>">Buat Disini</a> -->
                                         </div>

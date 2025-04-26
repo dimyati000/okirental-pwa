@@ -1,67 +1,91 @@
-<?= $this->include('layout/adminHead') ?>
-  
+
+<!DOCTYPE html>
+<html lang="en">
+<?= $this->include('layout/adminCSS') ?>
+
 <body>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
-      <div class="navbar-bg"></div>
-      <nav class="navbar navbar-expand-lg main-navbar">
-        <form class="form-inline mr-auto">
-          <ul class="navbar-nav mr-3">
-            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-          </ul>
-        </form>
-        <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="<?php echo base_url() ?>/assets/img/avatar/avatar-5.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hi, Azhar</div>
-            </a><div class="dropdown-menu dropdown-menu-right">
-          <div class="dropdown-title">Logged in 5 min ago</div>
-            <a href="<?= site_url('Profile') ?>" class="dropdown-item has-icon"> 
-                  <i class="far fa-user"></i> Profile</a>
-            <div class="dropdown-divider"></div>  
-            <?php echo anchor('../Login/logout', '<div class="dropdown-item">
-                  <i class="fas fa-sign-out-alt">Logout</i>
-              </div>'); ?>
+      <?= $this->include('layout/adminHeader') ?>
+      <?= $this->include('layout/adminSidebar') ?>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Dashboard</h1>
           </div>
-        </li>
-      </nav>
-      <div class="main-sidebar">
-        <aside id="sidebar-wrapper">
-          <div class="sidebar-brand">
-            <div class="m-2">
-              <a href="<?php echo('Home')?>">
-                <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-evanotranshitam.png') ?>"  style="border-radius:5px" alt="logo" width="80%">
-              </a>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-primary">
+                  <i class="far fa-user"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Admin</h4>
+                  </div>
+                  <div class="card-body">
+                    10
+                  </div>
+                </div>
+              </div>
             </div>
-            <p>OKI RENTCAR SYSTEM</p>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-danger">
+                  <i class="far fa-newspaper"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>News</h4>
+                  </div>
+                  <div class="card-body">
+                    42
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-warning">
+                  <i class="far fa-file"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Reports</h4>
+                  </div>
+                  <div class="card-body">
+                    1,201
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-success">
+                  <i class="fas fa-circle"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Online Users</h4>
+                  </div>
+                  <div class="card-body">
+                    47
+                  </div>
+                </div>
+              </div>
+            </div>                  
           </div>
-          <ul class="sidebar-menu">
-            <li class="menu-header">MENU</li>
-            <li class="active"><a class="nav-link" href="<?php echo base_url('Dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
-            <li class="menu-header">Master Data</li>
-            <li><a class="nav-link" href="<?php echo base_url('Pelanggan') ?>"><i class="fas fa-user"></i> <span>Pelanggan</span></a></li>
-            <li><a class="nav-link" href="<?php echo base_url('Mobil') ?>"><i class="fas fa-car"></i> <span>Mobil</span></a></li>
-            <li><a class="nav-link" href="<?php echo base_url('Jaminan') ?>"><i class="fas fa-thumbtack"></i> <span>Jaminan</span></a></li>
-            <li class="menu-header">Transaksi</li>
-            <li><a class="nav-link" href="<?php echo base_url('FormSewa') ?>"><i class="fas fa-file"></i> <span>Form Sewa</span></a></li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-clipboard-check"></i> <span>Daftar Sewa</span></a>
-              <ul class="dropdown-menu">
-                <a class="nav-link" href="<?php echo base_url('DaftarSewa/penumpang') ?>"><i class="fas fa-car-side"></i> <span>Sewa Penumpang</span></a>
-                <a class="nav-link" href="<?php echo base_url('DaftarSewa/barang') ?>"><i class="fas fa-truck"></i> <span>Sewa Barang</span></a>
-              </ul>
-            </li>
-            <!-- <li class="menu-header">Laporan</li>
-            <li><a class="nav-link" href="<?php echo base_url('Laporan') ?>"><i class="fas fa-archive"></i> <span>Laporan Transaksi</span></a></li> -->
-            <!-- <li><a href="<?php echo base_url() . 'Tentang'?>"><i class="fas fa-cog"></i><span>Setting</span></a></li> -->
-          </ul>
-        </aside>
+         
+        </section>
       </div>
-      <?= $this->renderSection('content') ?>
+      <footer class="main-footer">
+        <?= $this->include('layout/adminFooter') ?>
+      </footer>
     </div>
-  </div>  
+  </div>
+
+  <?= $this->include('layout/adminJS') ?>
 </body>
-<?= $this->include('layout/adminFooter') ?>
-  
-<?= $this->include('layout/adminJs')?>
-  
-</html><!-- Begin Page Content -->
+</html>

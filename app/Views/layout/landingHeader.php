@@ -7,7 +7,7 @@
     <meta name="keywords" content="Sistem Informasi Oki Rentcar">
     <meta name="author" content="Dimyati Azhar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url('/assets/img/logo-okirentcar.png') ?>"/>
     <meta name="theme-color" content="#ff0000"/>
     <link rel="manifest" href="manifest.json">
     <script>
@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>/evolo/css/style.css">
     
 	<!-- Favicon  -->
-  <link rel="icon" href="<?php echo base_url('/assets/img/logo-favicon.png') ?>">
+  <link rel="icon" href="<?php echo base_url('/assets/img/logo-okirentcar.png') ?>">
   </head>
   <body>
     

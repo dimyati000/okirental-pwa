@@ -1,7 +1,5 @@
-<footer class="main-footer">
-    <div class="footer-left">
-        Copyright &copy; <script>
-            2023
-        </script> All rights reserved | Evano Trans.
-    </div>
-</footer>
+<div class="footer-left">
+    Copyright &copy; 2025 <div class="bullet"></div> Design By <a href="">Dimyati Azhar</a>
+</div>
+<div class="footer-right">
+</div>

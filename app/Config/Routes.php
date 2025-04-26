@@ -35,7 +35,7 @@ $routes->get('/', 'LandingPage::index');
 $routes->get('/login', 'Auth::index');
 $routes->post('/logout', 'Auth::logout');
 $routes->post('/check_auth', 'Auth::check_auth');
-$routes->get('/beranda', 'Beranda::index');
+$routes->get('/beranda', 'Beranda::index', ['filter' => 'auth']);
 $routes->post('/dashboard/status-kegiatan', 'Home::getChartKegiatan');
 // Master Kelompok Kegiatan 
 $routes->get('/master/mobil', 'Mobil::index', ['filter' => 'auth:role_menu']);
