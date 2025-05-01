@@ -1,4 +1,4 @@
-<?= $this->extend('layout/adminLayout2') ?>
+<?= $this->extend('layout/adminLayout') ?>
 <?= $this->section('content') ?>
 <section class="section">
     <div class="section-header">
@@ -17,7 +17,7 @@
                     <div class="card-header">
                         <h4>Data Pelanggan</h4>
                         <div class="card-header-action">
-                            <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                            <a href="javascript:;" onclick="handleRefresh()"><i class="fas fa-sync"></i></a>
                         </div>
                     </div>
                     <div class="card-content">
@@ -38,10 +38,10 @@
                                 <div class="col-md-4">
                                     <div class="input-group">
                                         <input type="text" id="search" name="search" class="form-control"
-                                            placeholder="Cari . . .">
-                                        <div class="input-group-append">
+                                            placeholder="Cari <Tekan Enter>">
+                                        <div class="input-group-append cursor-pointer" onclick="pageLoad(1)">
                                             <span class="input-group-text">
-                                                <i class="fa fa-search"></i>
+                                                <i class="fas fa-search"></i>
                                             </span>
                                         </div>
                                     </div>

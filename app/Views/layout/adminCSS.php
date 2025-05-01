@@ -1,7 +1,16 @@
 <head>
   <meta charset="UTF-8">
+  <title>Oki Rentcar System</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff0000">
+  <meta name="author" content="Dimyati Azhar">
+  <meta name="keywords" content="Oki Rentcar">
+  <meta name="description" content="Sistem Informasi Oki Rentcar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The small framework with powerful features">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>General Dashboard &mdash; Stisla</title>
+  <link rel="shortcut icon" type="image/png" href="<?php echo base_url('/assets/img/logo-okirentcar.png') ?>">
+  
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?php echo base_url() ?>/assets/modules/bootstrap/css/bootstrap.min.css">
@@ -17,6 +26,8 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/style.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/components.css">
+
+  <!-- Start GA -->
   <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/sort-table.css">
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>

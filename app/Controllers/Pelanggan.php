@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\PelangganModel;
+date_default_timezone_set('Asia/Jakarta');
 
 class Pelanggan extends BaseController
 {
@@ -22,7 +23,7 @@ class Pelanggan extends BaseController
 		$pg	= ($this->request->getGet('page')) ? $this->request->getGet('page') : 1;
 		$limit	= ($this->request->getGet('count')) ? $this->request->getGet('count') : 10;
 		$sortBy	= ($this->request->getGet('sortBy') != "") ? $this->request->getGet('sortBy') : 'created_at';
-		$sortType = ($this->request->getGet('sortType') != "") ? $this->request->getGet('sortType') : 'asc';
+		$sortType = ($this->request->getGet('sortType') != "") ? $this->request->getGet('sortType') : 'desc';
 		$offset = ($limit * $pg) - $limit;
 
 		$page              = array();
@@ -58,7 +59,6 @@ class Pelanggan extends BaseController
 			$alamat = $this->request->getPost('alamat');
 			$uuid_v4 = $this->uuid->v4();
 
-			date_default_timezone_set('Asia/Jakarta');
 			if($id==""){
 				$this->MPelanggan->insert([
 					"id" => $uuid_v4,
@@ -91,6 +91,7 @@ class Pelanggan extends BaseController
 	{
 		try {
 			if($this->request->getPost('id')){
+				date_default_timezone_set('Asia/Jakarta');
 				$id = $this->request->getPost('id');
 				$this->MPelanggan->delete($id);
 

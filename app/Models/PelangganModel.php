@@ -17,13 +17,16 @@ class PelangganModel extends Model
     ];
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
+    protected $useSoftDeletes = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
     
     function listCount($key=""){
         $query = $this->db->query("
             select count(*) as jml from tb_pelanggan p
-            where concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
+            where p.deleted_at is null 
+            and concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
         ")->getRowArray();
         return $query;
     }
@@ -31,7 +34,8 @@ class PelangganModel extends Model
     function listData($key="", $column="", $sort="", $limit="", $offset=""){
         $query = $this->db->query("
             select p.* from tb_pelanggan p
-            where concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
+            where p.deleted_at is null 
+            and concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
             order by $column $sort
             limit $limit offset $offset
         ");

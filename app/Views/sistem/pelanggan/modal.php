@@ -29,13 +29,13 @@
                 <div class="form-group mb-2">
                     <label for="noTelp" class="form-label">No Telp</label>
                     <input class="form-control" id="noTelp" name="noTelp" type="text" placeholder="No Telepon . . ."  
-                        value="<?php if(isset($data)){echo $data['noTelp'];} ?>"
+                        value="<?php if(isset($data)){echo $data['no_telp'];} ?>"
                         required 
                     >
                 </div>
                 <div class="form-group mb-2">
                     <label for="nama" class="form-label">Alamat</label>
-                    <textarea class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan . . ." ><?php if(isset($data)){echo $data['keterangan'];} ?></textarea>
+                    <textarea class="form-control" id="alamat" name="alamat" placeholder="Keterangan . . ." ><?php if(isset($data)){echo $data['alamat'];} ?></textarea>
                 </div>
             </div>
             <div class="modal-footer">
