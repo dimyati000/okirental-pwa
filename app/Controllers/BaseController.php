@@ -16,6 +16,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use Config\Database;
+use App\Libraries\Uuid;
 
 class BaseController extends Controller
 {
@@ -45,7 +46,7 @@ class BaseController extends Controller
 		// Load connection database in controller
 		// $this->db = Database::connect();
 		// Load Costum Library UUID
-		// $this->uuid = new Uuid();
+		$this->uuid = new Uuid();
 		// Load Costum Library Breadcrumb
 		// $this->breadcrumb = new Breadcrumb();
 		// Load Model App Config

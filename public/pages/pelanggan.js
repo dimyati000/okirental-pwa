@@ -73,19 +73,18 @@ function fetchData() {
 }
 
 $("#btn-add").click(function() {
-    console.log("tambah data");
-//     $.ajax({
-//         url: "<?php echo site_url('kegiatan/load-modal') ?>",
-//         type: 'post',
-//         dataType: 'html',
-//         beforeSend: function() {},
-//         success: function(result) {
-//             $('#div_modal').html(result);
-//             $('#modal_title_add').show();
-//             $('#modeform').val('ADD');
-//             $('#form-modal').modal('show');
-//         }
-//     });
+    $.ajax({
+        url: baseUrl + "/Pelanggan/loadModal",
+        type: 'post',
+        dataType: 'html',
+        beforeSend: function() {},
+        success: function(result) {
+            $('#div_modal').html(result);
+            $('#modal_title_add').show();
+            $('#modeform').val('ADD');
+            $('#form-modal').modal('show');
+        }
+    });
 });
 
 var currentPage = $('#current').val();
@@ -170,4 +169,61 @@ $('.btn-hapus').click(function (e) {
         allowOutsideClick: false
     });
     e.preventDefault();
+});
+
+$('#form').submit(function (event) {
+    var mode = $("#modeform").val();
+    var title = "";
+    var narasi = "";
+    if(mode=='ADD'){
+        title = "Simpan Pelanggan";
+        narasi = "Apakah Anda yakin menyimpan data ?";
+    }else{
+        title = "Edit Pelanggan";
+        narasi = "Apakah Anda yakin mengubah data ?";
+    }
+
+    event.preventDefault();
+    Swal.fire({
+        title: title,
+        text: narasi,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3498db',
+        cancelButtonColor: '#95a5a6',
+        confirmButtonText: 'Simpan',
+        cancelButtonText: 'Batal',
+        showLoaderOnConfirm: true,
+        preConfirm: function () {
+            return new Promise(function (resolve) {
+                $.ajax({
+                    url: baseUrl + '/Pelanggan/save',
+                    method: 'POST',
+                    dataType: 'json',	
+                    data: new FormData($('#form')[0]),
+                    async: true,
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        if (data.success == true) {
+                            Toast.fire({
+                                icon: 'success',
+                                title: data.message
+                            });
+                            $('#form-modal').modal('hide');
+                            swal.hideLoading()
+                            pageLoad(1);
+                        } else {
+                            Swal.fire({icon: 'error',title: 'Oops...',text: data.message});
+                        }
+                    },
+                    fail: function (event) {
+                        alert(event);
+                    }
+                });
+            });
+        },
+        allowOutsideClick: false
+    });
+    event.preventDefault();
 });

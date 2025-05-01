@@ -21,6 +21,12 @@
 
   <script>
     const baseUrl = '<?= base_url() ?>';
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
   </script>
   <?= $this->include('layout/adminJS') ?>
   <?= $this->renderSection('contentJs') ?>
