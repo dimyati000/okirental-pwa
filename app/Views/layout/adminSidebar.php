@@ -1,14 +1,12 @@
 <style>
 #mentul-mentul{
     text-align: center;
-        position: relative;
-    -webkit-animation: floatBubble 0.90s infinite;
+    position: relative;
     -webkit-animation-direction:alternate;    
-    margin-left: 60px;
+    -webkit-animation: floatBubble 0.90s infinite;
     margin-top: 5px;
     margin-bottom: 5px;
   }
-
 
 @-webkit-keyframes floatBubble{
  from{
@@ -24,11 +22,10 @@
 </style>
 
 <div class="main-sidebar sidebar-style-2">
-    <aside id="sidebar-wrapper">
-        <div>
-            <img id="mentul-mentul" src="<?php echo base_url('/assets/img/logo-favicon.png') ?>"  style="align-conten: center" alt="logo" width="50%">
-        </div>
+    <aside id="sidebar-wrapper">    
         <div class="sidebar-brand">
+            <img src="<?php echo base_url('/assets/img/logo-okirentcar.png') ?>"  style="margin-top:10px" alt="logo" width="50%">
+            <br>
             <a href="#">Oki Rentcar System</a>
             </div>
             <div class="sidebar-brand sidebar-brand-sm">

@@ -1,12 +1,12 @@
 <?php namespace App\Controllers;
 
-class Mobil extends BaseController
+class Jaminan extends BaseController
 {
 	public function index()
 	{
 		$app_config = $this->config->app_config();
 		$data['aplikasi'] = $app_config;
 		$data['title'] = "Selamat Datang | " . $app_config['nama_sistem'];
-		return view('sistem/mobil/index') ;
+		return view('sistem/jaminan/index') ;
 	}
 }

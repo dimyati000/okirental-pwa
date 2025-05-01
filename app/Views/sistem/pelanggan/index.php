@@ -38,10 +38,10 @@
                                 <div class="col-md-4">
                                     <div class="input-group">
                                         <input type="text" id="search" name="search" class="form-control"
-                                            placeholder="Cari . . .">
-                                        <div class="input-group-append">
+                                            placeholder="Cari <Tekan Enter>">
+                                        <div class="input-group-append cursor-pointer" onclick="pageLoad(1)">
                                             <span class="input-group-text">
-                                                <i class="fa fa-search"></i>
+                                                <i class="fas fa-search"></i>
                                             </span>
                                         </div>
                                     </div>
