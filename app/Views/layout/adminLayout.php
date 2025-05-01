@@ -21,6 +21,10 @@
     </div>
   </div>
 
-  <?= $this->include('layout/adminJs') ?>
+  <script>
+    const baseUrl = '<?= base_url() ?>';
+  </script>
+  <?= $this->include('layout/adminJS') ?>
+  <?= $this->renderSection('contentJs') ?>
 </body>
 </html>
