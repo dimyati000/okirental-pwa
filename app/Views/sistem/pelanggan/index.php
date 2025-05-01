@@ -11,13 +11,13 @@
     </div>
 
     <div class="section-body">
+        <div class="col-12 col-md-12 col-lg-12">
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="card-header">
                         <h4>Data Pelanggan</h4>
+                        <a href="javascript:;" class="btn btn-danger btn-icon icon-right">Refresh<i class="fas fa-sync-alt"></i></a>
                         <div class="card-header-action">
-                            <a href="javascript:;"><i class="fa fa-refresh"></i></a>
                         </div>
                     </div>
                     <div class="card-content">
