@@ -19,9 +19,6 @@
     </div>
   </div>
 
-  <script>
-    const baseUrl = '<?= base_url() ?>';
-  </script>
   <?= $this->include('layout/adminJS') ?>
   <script>
     const baseUrl = '<?= base_url() ?>';
