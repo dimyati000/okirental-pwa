@@ -17,7 +17,7 @@
                     <div class="card-header">
                         <h4>Data Pelanggan</h4>
                         <div class="card-header-action">
-                            <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                            <a href="javascript:;" onclick="handleRefresh()"><i class="fas fa-sync"></i></a>
                         </div>
                     </div>
                     <div class="card-content">

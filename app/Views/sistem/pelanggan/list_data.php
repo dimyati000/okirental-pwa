@@ -24,8 +24,8 @@
                     <td><?= $row->no_telp ?></td>
                     <td><?= $row->alamat ?></td>
                     <td class="text-center">
-                        <a href="javascript:;" data-id="<?=$row->id?>" data-name="<?=$row->nama?>" class="btn btn-sm btn-icon btn-warning waves-effect waves-light btn-ubah" data-toggle="tooltip" title="Edit Data"><i style="color:#fff;" class="fa fa-edit"></i></a>
-                        <a href="javascript:;" data-id="<?=$row->id?>" data-name="<?=$row->nama?>" class="btn btn-sm btn-icon btn-danger waves-effect waves-light btn-hapus" data-toggle="tooltip" title="Hapus Data"><i class="fa fa-trash"></i></a>	    
+                        <a href="javascript:;" data-id="<?=$row->id?>" data-name="<?=$row->nama?>" class="btn btn-sm btn-icon btn-warning waves-effect waves-light btn-edit" data-toggle="tooltip" title="Edit Data"><i style="color:#fff;" class="fa fa-edit"></i></a>
+                        <a href="javascript:;" data-id="<?=$row->id?>" data-name="<?=$row->nama?>" class="btn btn-sm btn-icon btn-danger waves-effect waves-light btn-delete" data-toggle="tooltip" title="Hapus Data"><i class="fa fa-trash"></i></a>	    
                     </td>
                 </tr>
             <?php } ?>
@@ -56,8 +56,10 @@
       <thead class="tr-head">
           <tr>
               <th width="5%" class="text-center">No </th>
-              <th width="20%">Nama Kegiatan </th>
-              <th width="20%" class="text-center">Kelompok Kegiatan </th>
+              <th width="20%">NIK </th>
+              <th width="20%">Nama </th>
+              <th width="20%">No Telp </th>
+              <th width="20%">Alamat </th>
               <th width="10%" class="text-center">Aksi</th>
           </tr>
       </thead>
