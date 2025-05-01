@@ -11,9 +11,7 @@
 
       <!-- Main Content -->
       <div class="main-content">
-        <!-- <section class="section"> -->
-          <?= $this->renderSection('content') ?>
-        <!-- </section> -->
+        <?= $this->renderSection('content') ?>
       </div>
       <footer class="main-footer">
         <?= $this->include('layout/adminFooter') ?>
@@ -21,6 +19,9 @@
     </div>
   </div>
 
+  <script>
+    const baseUrl = '<?= base_url() ?>';
+  </script>
   <?= $this->include('layout/adminJS') ?>
   <script>
     const baseUrl = '<?= base_url() ?>';
