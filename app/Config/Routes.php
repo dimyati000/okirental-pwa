@@ -36,13 +36,24 @@ $routes->get('/login', 'Auth::index');
 $routes->post('/logout', 'Auth::logout');
 $routes->post('/check_auth', 'Auth::check_auth');
 $routes->get('/beranda', 'Beranda::index', ['filter' => 'auth']);
-$routes->post('/dashboard/status-kegiatan', 'Home::getChartKegiatan');
-// Master Kelompok Kegiatan 
-$routes->get('/master/mobil', 'Mobil::index', ['filter' => 'auth:role_menu']);
+// Master Pelanggan
+$routes->get('/pelanggan', 'Pelanggan::index', ['filter' => 'auth']);
+$routes->post('/pelanggan/read-data/(:num)', 'Pelanggan::read_data/$1');
+$routes->post('/pelanggan/load-modal', 'Pelanggan::load_modal');
+$routes->post('/pelanggan/save', 'Pelanggan::save');
+$routes->post('/pelanggan/delete', 'Pelanggan::delete');
+// Master Mobil
+$routes->get('/mobil', 'Mobil::index', ['filter' => 'auth']);
 $routes->post('/mobil/read-data/(:num)', 'Mobil::read_data/$1');
 $routes->post('/mobil/load-modal', 'Mobil::load_modal');
 $routes->post('/mobil/save', 'Mobil::save');
 $routes->post('/mobil/delete', 'Mobil::delete');
+// Master Jaminan
+$routes->get('/jaminan', 'Jaminan::index', ['filter' => 'auth']);
+$routes->post('/jaminan/read-data/(:num)', 'Jaminan::read_data/$1');
+$routes->post('/jaminan/load-modal', 'Jaminan::load_modal');
+$routes->post('/jaminan/save', 'Jaminan::save');
+$routes->post('/jaminan/delete', 'Jaminan::delete');
 /**
  * --------------------------------------------------------------------
  * Additional Routing
