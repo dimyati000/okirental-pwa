@@ -27,7 +27,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [];
+	protected $helpers = ['pagination_helper', 'url'];
 
 	/**
 	 * Constructor.
@@ -43,7 +43,7 @@ class BaseController extends Controller
 		// E.g.:
 		// $this->session = \Config\Services::session();
 		// Load connection database in controller
-		$this->db = Database::connect();
+		// $this->db = Database::connect();
 		// Load Costum Library UUID
 		// $this->uuid = new Uuid();
 		// Load Costum Library Breadcrumb
