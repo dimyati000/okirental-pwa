@@ -23,6 +23,17 @@ function pageLoad(i) {
     fetchData();
 }
 
+function handleRefresh(){
+    var limit = $('#limit').val();
+    var q = $('#search').val();
+    updateUrlParam('page', 1);
+    updateUrlParam('count', limit);
+    updateUrlParam('q', '');
+    updateUrlParam('sortBy', 'created_at');
+    updateUrlParam('sortType', 'desc');
+    fetchData();
+}
+
 function handleSort(sortBy){
     const params = new URLSearchParams(window.location.search);
     let q = params.get('q') || '';
@@ -67,25 +78,23 @@ function fetchData() {
         beforeSend: function() {},
         success: function(result) {
             $('#list').html(result);
-            // sort_finish(id_th,sort);
         }
     });
 }
 
 $("#btn-add").click(function() {
-    console.log("tambah data");
-//     $.ajax({
-//         url: "<?php echo site_url('kegiatan/load-modal') ?>",
-//         type: 'post',
-//         dataType: 'html',
-//         beforeSend: function() {},
-//         success: function(result) {
-//             $('#div_modal').html(result);
-//             $('#modal_title_add').show();
-//             $('#modeform').val('ADD');
-//             $('#form-modal').modal('show');
-//         }
-//     });
+    $.ajax({
+        url: baseUrl + "/Pelanggan/loadModal",
+        type: 'post',
+        dataType: 'html',
+        beforeSend: function() {},
+        success: function(result) {
+            $('#div_modal').html(result);
+            $('#modal_title_add').show();
+            $('#modeform').val('ADD');
+            $('#form-modal').modal('show');
+        }
+    });
 });
 
 var currentPage = $('#current').val();
@@ -105,10 +114,10 @@ function sort_table(id,column){
     pageLoad(currentPage);
 }
 
-$(".btn-ubah").click(function() {
+$(document).on('click', '.btn-edit', function(event) {
     var id = $(this).attr('data-id');
     $.ajax({
-        url: '<?= site_url() ?>'+'/kegiatan/load-modal',
+        url: baseUrl + '/Pelanggan/loadModal',
         type: 'post',
         dataType: 'html',
         data:{id:id},
@@ -122,13 +131,13 @@ $(".btn-ubah").click(function() {
     });
 });
 
-$('.btn-hapus').click(function (e) {
+$(document).on('click', '.btn-delete', function(e) {
     var id = $(this).attr('data-id');
     var title = $(this).attr('data-name');
 
     Swal.fire({
-        title: 'Hapus Kegiatan',
-        text: "Apakah Anda yakin menghapus kegiatan : "+title,
+        title: 'Hapus Pelanggan',
+        text: "Apakah Anda yakin menghapus pelanggan : "+title,
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#d33',
@@ -141,7 +150,7 @@ $('.btn-hapus').click(function (e) {
                 $.ajax({
                     method: 'POST',
                     dataType: 'json',
-                    url: '<?= site_url() ?>'+'/kegiatan/delete',
+                    url: baseUrl + '/Pelanggan/delete',
                     data: {
                         id: id
                     },
@@ -152,7 +161,7 @@ $('.btn-hapus').click(function (e) {
                                 title: data.message
                             });
                             swal.hideLoading()
-                            pageLoad(currentPage);
+                            pageLoad(1);
                         } else {
                             Swal.fire({
                                 icon: 'error',
@@ -170,4 +179,33 @@ $('.btn-hapus').click(function (e) {
         allowOutsideClick: false
     });
     e.preventDefault();
+});
+
+$(document).on('submit', '#form', function(event) {
+    event.preventDefault();
+    $.ajax({
+        url: baseUrl + '/Pelanggan/save',
+        method: 'POST',
+        dataType: 'json',	
+        data: new FormData($('#form')[0]),
+        async: true,
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            if (data.success == true) {
+                Toast.fire({
+                    icon: 'success',
+                    title: data.message
+                });
+                $('#form-modal').modal('hide');
+                swal.hideLoading()
+                pageLoad(1);
+            } else {
+                Swal.fire({icon: 'error',title: 'Oops...',text: data.message});
+            }
+        },
+        fail: function (event) {
+            alert(event);
+        }
+    });
 });

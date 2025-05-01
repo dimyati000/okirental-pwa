@@ -14,6 +14,7 @@
 <script src="<?php echo base_url() ?>/assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
 <script src="<?php echo base_url() ?>/assets/modules/summernote/summernote-bs4.js"></script>
 <script src="<?php echo base_url() ?>/assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+<script src="<?php echo base_url() ?>/assets/modules/sweetalert2/sweetalert2.all.min.js"></script>
 
 <!-- Page Specific JS File -->
 <script src="<?php echo base_url() ?>/assets/js/page/index-0.js"></script>

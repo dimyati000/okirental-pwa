@@ -11,9 +11,7 @@
 
       <!-- Main Content -->
       <div class="main-content">
-        <section class="section">
-          <?= $this->renderSection('content') ?>
-        </section>
+        <?= $this->renderSection('content') ?>
       </div>
       <footer class="main-footer">
         <?= $this->include('layout/adminFooter') ?>
@@ -25,6 +23,15 @@
     const baseUrl = '<?= base_url() ?>';
   </script>
   <?= $this->include('layout/adminJS') ?>
+  <script>
+    const baseUrl = '<?= base_url() ?>';
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+  </script>
   <?= $this->renderSection('contentJs') ?>
 </body>
 </html>

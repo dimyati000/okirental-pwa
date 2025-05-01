@@ -18,6 +18,7 @@
                         <h4>Data Pelanggan</h4>
                         <a href="javascript:;" class="btn btn-danger btn-icon icon-right">Refresh<i class="fas fa-sync-alt"></i></a>
                         <div class="card-header-action">
+                            <a href="javascript:;" onclick="handleRefresh()"><i class="fas fa-sync"></i></a>
                         </div>
                     </div>
                     <div class="card-content">

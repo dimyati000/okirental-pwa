@@ -1,6 +1,7 @@
 <?= $this->extend('layout/adminLayout') ?>
 
 <?= $this->section('content') ?>
+<section class="section">
     <div class="section-header">
         <h1>Beranda</h1>
     </div>
@@ -66,5 +67,6 @@
             </div>
         </div>                  
     </div>
+</section>
 <?= $this->endSection() ?>
 
