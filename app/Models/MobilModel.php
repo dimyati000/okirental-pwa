@@ -1,14 +1,17 @@
 <?php namespace App\Models;
 use CodeIgniter\Model;
 
-class KegiatanModel extends Model
+class MobilModel extends Model
 {
-    protected $table = "m_kegiatan";
-    protected $primaryKey = 'id_kegiatan';
+    protected $table = "tb_mobil";
+    protected $primaryKey = 'id';
     protected $allowedFields = [
-        'id_kegiatan', 
-        'nama_kegiatan', 
-        'id_kelompok_kegiatan', 
+        'id', 
+        'nik', 
+        'nama', 
+        'no_telp', 
+        'alamat', 
+        'foto_ktp', 
         'created_at', 
         'updated_at'
     ];
@@ -19,18 +22,16 @@ class KegiatanModel extends Model
     
     function listCount($key=""){
         $query = $this->db->query("
-            select count(*) as jml from m_kegiatan k
-            left join m_kelompok_kegiatan kk on k.id_kelompok_kegiatan = kk.id_kelompok_kegiatan
-            where concat(k.nama_kegiatan, kk.nama_kelompok_kegiatan) ilike '%$key%'
+            select count(*) as jml from tb_pelanggan p
+            where concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
         ")->getRowArray();
         return $query;
     }
 
     function listData($key="", $column="", $sort="", $limit="", $offset=""){
         $query = $this->db->query("
-            select k.*, kk.nama_kelompok_kegiatan as kelompok_kegiatan from m_kegiatan k
-            left join m_kelompok_kegiatan kk on k.id_kelompok_kegiatan = kk.id_kelompok_kegiatan
-            where concat(k.nama_kegiatan, kk.nama_kelompok_kegiatan) ilike '%$key%'
+            select p.* from tb_pelanggan p
+            where concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
             order by $column $sort
             limit $limit offset $offset
         ");

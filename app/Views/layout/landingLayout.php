@@ -1,22 +1,5 @@
 <?= $this->include('layout/landingHeader') ?>
 
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('/evolo/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
-          <div class="col-lg-8 ftco-animate">
-          	<div class="text w-100 text-center mb-md-5 pb-md-5">
-				<h1 class="mb-4">Oki Rentcar Surabaya</h1>
-            	<p>Penyedia Jasa Sewa Mobil Dengan Cepat Melalui Sistem Booking Online.
-            	<br>Kami menyediakan sewa mobil lepas kunci serta Mobil yang telah anda sewa bisa kami kirim ke rumah sekarang juga!</p>
-	            </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
 	<?= $this->renderSection('content') ?>
 
  
