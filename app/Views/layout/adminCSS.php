@@ -1,6 +1,6 @@
 <head>
   <meta charset="UTF-8">
-  <title>Oki Rentcar System</title>
+  <title><?= $judul ?? 'Oki Rentcar System' ?></title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#ff0000">
   <meta name="author" content="Dimyati Azhar">

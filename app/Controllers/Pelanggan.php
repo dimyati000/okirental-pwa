@@ -6,15 +6,15 @@ date_default_timezone_set('Asia/Jakarta');
 class Pelanggan extends BaseController
 {
 	use ResponseTrait;
-	private $nama_menu = 'Pelanggan';
 	public function __construct()
 	{
+		$this->setJudulHalaman('Pelanggan');
 		$this->MPelanggan = new PelangganModel();
 	}
 
 	public function index()
 	{
-		return view('sistem/pelanggan/index') ;
+		return view('sistem/pelanggan/index', ['judul' => $this->getJudulLengkap(),]);
 	}
 
 	public function fetchData()

@@ -39,8 +39,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>/evolo/css/icomoon.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/evolo/css/style.css">
     
-	<!-- Favicon  -->
-  <link rel="icon" href="<?php echo base_url('/assets/img/logo-okirentcar.png') ?>">
+	  <!-- Favicon  -->
+    <link rel="icon" href="<?php echo base_url('/assets/img/logo-okirentcar.png') ?>">
   </head>
   <body>
     
