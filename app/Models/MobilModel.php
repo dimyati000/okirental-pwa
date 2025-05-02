@@ -22,7 +22,7 @@ class MobilModel extends Model
     
     function listCount($key=""){
         $query = $this->db->query("
-            select count(*) as jml from tb_pelanggan p
+            select count(*) as jml from tb_mobil[ p
             where concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
         ")->getRowArray();
         return $query;
