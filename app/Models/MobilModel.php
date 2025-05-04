@@ -9,11 +9,17 @@ class MobilModel extends Model
         'id', 
         'nik', 
         'nama', 
-        'no_telp', 
-        'alamat', 
-        'foto_ktp', 
-        'created_at', 
-        'updated_at'
+        'jenis', 
+        'merk', 
+        'nopol', 
+        'tahun', 
+        'harga12',
+        'harga14',
+        'bahan_bakar',
+        'warna',
+        'seat',
+        'denda',
+        'gambar-mobil'
     ];
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
@@ -22,16 +28,16 @@ class MobilModel extends Model
     
     function listCount($key=""){
         $query = $this->db->query("
-            select count(*) as jml from tb_mobil[ p
-            where concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
+            select count(*) as jml from tb_mobil m 
+            where concat(m.nama, m.jenis, m.merk) like '%$key%'
         ")->getRowArray();
         return $query;
     }
 
     function listData($key="", $column="", $sort="", $limit="", $offset=""){
         $query = $this->db->query("
-            select p.* from tb_pelanggan p
-            where concat(p.nik, p.nama, p.no_telp, p.alamat) like '%$key%'
+            select m.* from tb_mobil m
+            where concat(m.nama, m.jenis, m.merk) like '%$key%'
             order by $column $sort
             limit $limit offset $offset
         ");

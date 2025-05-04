@@ -3,7 +3,7 @@
 ?>
 <div class="table-responsive">
     <table class="table table-bordered table-hover">
-        <thead class="tr-head">
+        <!-- <thead class="tr-head"> -->
             <tr>
                 <th width="5%" class="text-center">No </th>
                 <th width="10%" class="sortable" data-sort="" onclick="handleSort('nik')">NIK </th>
@@ -12,7 +12,7 @@
                 <th width="20%">Alamat </th>
                 <th width="10%" class="text-center">Aksi</th>
             </tr>
-        </thead>
+        <!-- </thead> -->
         <tbody>
             <?php 
             $no=($paging['current']-1)*$paging['limit']; 
@@ -53,7 +53,7 @@
 <?php }else{ ?>
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
-      <thead class="tr-head">
+      <!-- <thead class="tr-head"> -->
           <tr>
               <th width="5%" class="text-center">No </th>
               <th width="20%">NIK </th>
@@ -62,10 +62,10 @@
               <th width="20%">Alamat </th>
               <th width="10%" class="text-center">Aksi</th>
           </tr>
-      </thead>
+      <!-- </thead> -->
       <tbody>
           <tr>
-            <td colspan="4">Data tidak ditemukan !</td>
+            <td colspan="6">Data tidak ditemukan !</td>
           </tr>
       </tbody>
   </table>

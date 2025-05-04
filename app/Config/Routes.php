@@ -38,7 +38,7 @@ $routes->post('/check_auth', 'Auth::check_auth');
 $routes->get('/beranda', 'Beranda::index', ['filter' => 'auth']);
 // Master Pelanggan
 $routes->get('/pelanggan', 'Pelanggan::index', ['filter' => 'auth']);
-$routes->post('/pelanggan/read-data/(:num)', 'Pelanggan::read_data/$1');
+$routes->post('/pelanggan/read-data/(:num)', 'Pelanggan::read_data/$1',);
 $routes->post('/pelanggan/load-modal', 'Pelanggan::load_modal');
 $routes->post('/pelanggan/save', 'Pelanggan::save');
 $routes->post('/pelanggan/delete', 'Pelanggan::delete');

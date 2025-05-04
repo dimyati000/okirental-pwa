@@ -3,7 +3,7 @@
 ?>
 <div class="table-responsive">
     <table class="table table-bordered table-hover">
-        <thead class="tr-head">
+        <!-- <thead class="tr-head"> -->
             <tr>
                 <th width="5%" class="text-center">No </th>
                 <th width="10%" class="sortable" data-sort="" onclick="handleSort('nik')">NIK </th>
@@ -12,7 +12,7 @@
                 <th width="20%">Alamat </th>
                 <th width="10%" class="text-center">Aksi</th>
             </tr>
-        </thead>
+        <!-- </thead> -->
         <tbody>
             <?php 
             $no=($paging['current']-1)*$paging['limit']; 
@@ -32,28 +32,33 @@
         </tbody>
     </table>
 </div>
-<div class="row">
-    <br>
-    <div class="col-xs-12 col-md-6" style="padding-top:5px; color:#333;">
-    Menampilkan data
-    <?php $batas_akhir = (($paging['current'])*$paging['limit']);
-    if ($batas_akhir > $paging['count_row']) {
-        $batas_akhir = $paging['count_row'];
-    }
-    echo ((($paging['current']-1)*$paging['limit'])+1).' - '.$batas_akhir.' dari total '.$paging['count_row']; ?>
-    data
-    </div>
-    <br>
-    <div class="col-xs-12 col-md-6">
-        <div style="float:right;">
-            <?php echo $paging['list']; ?>
+<!-- <div class="card-footer">
+<nav class="d-inline-block"> -->
+    <div class="row">
+        <br>
+        <div class="col-xs-12 col-md-6" style="padding-top:5px; color:#333;">
+        Menampilkan data
+        <?php $batas_akhir = (($paging['current'])*$paging['limit']);
+        if ($batas_akhir > $paging['count_row']) {
+            $batas_akhir = $paging['count_row'];
+        }
+        echo ((($paging['current']-1)*$paging['limit'])+1).' - '.$batas_akhir.' dari total '.$paging['count_row']; ?>
+        data
+        </div>
+        <br>
+        <div class="col-xs-12 col-md-6">
+            <div style="float:right;">
+                <?php echo $paging['list']; ?>
+            </div>
         </div>
     </div>
-</div>
+<!-- </nav>
+</div> -->
 <?php }else{ ?>
 <div class="table-responsive">
-  <table class="table table-bordered table-hover">
-      <thead class="tr-head">
+  <!-- <table class="table table-bordered table-hover"> -->
+  <table class="table table-bordered">
+      <!-- <thead class="tr-head"> -->
           <tr>
               <th width="5%" class="text-center">No </th>
               <th width="20%">NIK </th>
@@ -62,10 +67,10 @@
               <th width="20%">Alamat </th>
               <th width="10%" class="text-center">Aksi</th>
           </tr>
-      </thead>
+      <!-- </thead> -->
       <tbody>
           <tr>
-            <td colspan="4">Data tidak ditemukan !</td>
+            <td colspan="6">Data tidak ditemukan !</td>
           </tr>
       </tbody>
   </table>

@@ -11,21 +11,23 @@
     </div>
 
     <div class="section-body">
-        <div class="col-12 col-md-12 col-lg-12">
+        <h2 class="section-title">Tabel Master Data Pelanggan</h2>
+        <p class="section-lead">Berisi Data Pelanggan Tetap dan Pelanggan Baru</p>
+
         <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="card-header">
                         <h4>Data Pelanggan</h4>
-                        <div class="card-header-action">
+                        <!-- <div class="card-header-action"> -->
                             <a href="javascript:;" onclick="handleRefresh()"><i class="fas fa-sync"></i></a>
-                        </div>
+                        <!-- </div> -->
                     </div>
-                    <div class="card-content">
-                        <div class="card-body">
-                            <div class="row" style="padding-top:12px;">
-                                <div class="col-md-6">
-                                    <a href="javascript:;" class="btn btn-success mr-1 mb-1" id="btn-add"> <b> <i
-                                                class="fa fa-plus-circle"></i> &nbsp;Tambah</b></a>
+                    <div class="card-body">
+                        <!-- <div class="row style="padding-top:12px;""> -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <a href="javascript:;" class="btn btn-success mr-1 mb-1" id="btn-add"> <b> <i class="fa fa-plus-circle"></i> &nbsp;Tambah</b></a>
                                 </div>
                                 <div class="col-md-2">
                                     <select class="form-control" name="limit" id="limit" onchange="pageLoad(1)">
@@ -51,9 +53,10 @@
                             <div id="list"></div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>      
+            </div>      
         </div>
+    </div>
 </section>
 <!-- DATA SORT -->
 <input type="hidden" name="input_id_th" id="input_id_th" value="#column_waktu">
