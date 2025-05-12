@@ -11,8 +11,8 @@
     </div>
 
     <div class="section-body">
-        <h2 class="section-title">Tabel Master Data Mobil</h2>
-        <p class="section-lead">Berisi Data Mobil Lama dan Mobil Baru</p>
+        <h2 class="section-title">Menu Master Data Mobil</h2>
+        <p class="section-lead">Terdapat Tabel Berisi Data Mobil Lama & Mobil Baru</p>
 
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12">

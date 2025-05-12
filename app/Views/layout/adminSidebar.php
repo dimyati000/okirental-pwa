@@ -38,8 +38,10 @@
         <li><a class="nav-link" href="<?php echo base_url('Mobil') ?>"><i class="fas fa-car"></i> <span>Mobil</span></a></li>
         <li><a class="nav-link" href="<?php echo base_url('Jaminan') ?>"><i class="fas fa-medal"></i> <span>Jaminan</span></a></li>
         <li class="menu-header">Transaksi</li>
+        <!-- <li><a class="nav-link" href="<?php echo base_url('FormSewa') ?>"><i class="fas fa-calendar"></i> <span>Daftar Booking</span></a></li> -->
         <li><a class="nav-link" href="<?php echo base_url('FormSewa') ?>"><i class="fas fa-file-alt"></i> <span>Form Sewa</span></a></li>
-        <li><a class="nav-link" href="<?php echo base_url('DaftarSewa') ?>"><i class="fas fa-list"></i> <span>Daftar Sewa</span></a></li>
+        <li><a class="nav-link" href="<?php echo base_url('DaftarSewa') ?>"><i class="fas fa-folder-open"></i> <span>Daftar Sewa</span></a></li>
+        <!-- <li><a class="nav-link" href="<?php echo base_url('DaftarSewa') ?>"><i class="fas fa-archive"></i> <span>Daftar Sewa</span></a></li> -->
         </ul>
 
         <!-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
