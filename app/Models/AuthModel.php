@@ -22,15 +22,15 @@ class AuthModel extends Model
 
         if ($user) {
             // Verifikasi password menggunakan MD5
-            if (md5($pass) == $user->password) {
-                // Jika MD5 cocok, hash password baru dengan bcrypt dan simpan ke database
-                $newHashedPassword = password_hash($pass, PASSWORD_DEFAULT);
-                $builder->set('password', $newHashedPassword);
-                $builder->where('id', $user->id);
-                $builder->update();
+            // if (md5($pass) == $user->password) {
+            //     // Jika MD5 cocok, hash password baru dengan bcrypt dan simpan ke database
+            //     $newHashedPassword = password_hash($pass, PASSWORD_DEFAULT);
+            //     $builder->set('password', $newHashedPassword);
+            //     $builder->where('id', $user->id);
+            //     $builder->update();
                 
-                return $user;  // Kembalikan data user setelah password diupdate
-            }
+            //     return $user;  // Kembalikan data user setelah password diupdate
+            // }
 
             // Verifikasi password dengan hash yang sudah ada
             if (password_verify($pass, $user->password)) {

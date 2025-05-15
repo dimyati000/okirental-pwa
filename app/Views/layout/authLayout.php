@@ -10,4 +10,4 @@
     Copyright &copy;2025 All rights reserved | Oki Rentcar.
 </div>
     
-<?= $this->include('layout/adminJs')?>
+<?= $this->include('layout/adminJS')?>
